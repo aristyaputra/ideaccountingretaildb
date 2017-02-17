@@ -1,0 +1,7 @@
+TYPE=TRIGGERS
+triggers='CREATE DEFINER=`root`@`localhost` TRIGGER `tgr_item_save2` BEFORE INSERT ON `mst_item` FOR EACH ROW if NEW.created_user = \'import\' then\nset NEW.active_status = 1;\nend if' 'CREATE DEFINER=`root`@`localhost` TRIGGER `tgr_item_save` AFTER INSERT ON `mst_item` FOR EACH ROW if NEW.created_user <> \'import\' then\ninsert into log_transaction(transaction_no,form,username,action,created_date,value)\nvalues (NEW.id_item, \'Master Barang\', NEW.created_user, \'Input\', NEW.created_date, concat(\'Input Master Barang Baru - \',New.item_name));\nend if' 'CREATE DEFINER=`root`@`localhost` TRIGGER `tgr_item_edit` AFTER UPDATE ON `mst_item` FOR EACH ROW insert into log_transaction(transaction_no,form,username,action,created_date,value)\nvalues (OLD.id_item, \'Master Item\', NEW.modified_user, \'Edit\', NEW.modified_date, concat(\'Edit Master Item - \',OLD.item_name))' 'CREATE DEFINER=`root`@`localhost` TRIGGER `tgr_item_del` AFTER DELETE ON `mst_item` FOR EACH ROW insert into log_transaction(transaction_no,form,username,action,created_date,value)\nvalues (OLD.id_item, \'Master Item\', OLD.modified_user, \'Hapus\', OLD.modified_date, concat(\'Edit Master Item - \',OLD.item_name))'
+sql_modes=0 0 0 0
+definers='root@localhost' 'root@localhost' 'root@localhost' 'root@localhost'
+client_cs_names='cp850' 'cp850' 'cp850' 'cp850'
+connection_cl_names='cp850_general_ci' 'cp850_general_ci' 'cp850_general_ci' 'cp850_general_ci'
+db_cl_names='utf8_general_ci' 'utf8_general_ci' 'utf8_general_ci' 'utf8_general_ci'

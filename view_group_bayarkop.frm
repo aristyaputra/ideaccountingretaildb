@@ -1,0 +1,15 @@
+TYPE=VIEW
+query=select sum(`ideaccounting_dev`.`trn_pinjam_bayar`.`nominal_bayar`) AS `nominal_bayar`,`ideaccounting_dev`.`trn_pinjam_bayar`.`no_pinjam` AS `no_pinjam` from `ideaccounting_dev`.`trn_pinjam_bayar` group by `ideaccounting_dev`.`trn_pinjam_bayar`.`no_pinjam`
+md5=f729919b4b359445367247a735f43e8a
+updatable=0
+algorithm=0
+definer_user=root
+definer_host=localhost
+suid=1
+with_check_option=0
+timestamp=2017-02-17 15:32:04
+create-version=1
+source=select sum(`trn_pinjam_bayar`.`nominal_bayar`) AS `nominal_bayar`,`trn_pinjam_bayar`.`no_pinjam` AS `no_pinjam` from `trn_pinjam_bayar` group by `trn_pinjam_bayar`.`no_pinjam`
+client_cs_name=utf8
+connection_cl_name=utf8_general_ci
+view_body_utf8=select sum(`ideaccounting_dev`.`trn_pinjam_bayar`.`nominal_bayar`) AS `nominal_bayar`,`ideaccounting_dev`.`trn_pinjam_bayar`.`no_pinjam` AS `no_pinjam` from `ideaccounting_dev`.`trn_pinjam_bayar` group by `ideaccounting_dev`.`trn_pinjam_bayar`.`no_pinjam`

@@ -1,0 +1,15 @@
+TYPE=VIEW
+query=select `ideaccounting_dev`.`mst_item`.`id_item` AS `id_item`,`ideaccounting_dev`.`mst_item`.`main_unit` AS `main_unit`,`ideaccounting_dev`.`mst_item`.`flag_buy` AS `flag_buy`,`ideaccounting_dev`.`mst_item`.`flag_inv` AS `flag_inv`,`ideaccounting_dev`.`mst_item`.`flag_sell` AS `flag_sell` from `ideaccounting_dev`.`mst_item`
+md5=e638964696e0ad448e133adfff484942
+updatable=1
+algorithm=0
+definer_user=root
+definer_host=localhost
+suid=1
+with_check_option=0
+timestamp=2017-02-17 15:32:05
+create-version=1
+source=select `mst_item`.`id_item` AS `id_item`,`mst_item`.`main_unit` AS `main_unit`,`mst_item`.`flag_buy` AS `flag_buy`,`mst_item`.`flag_inv` AS `flag_inv`,`mst_item`.`flag_sell` AS `flag_sell` from `mst_item`
+client_cs_name=cp850
+connection_cl_name=cp850_general_ci
+view_body_utf8=select `ideaccounting_dev`.`mst_item`.`id_item` AS `id_item`,`ideaccounting_dev`.`mst_item`.`main_unit` AS `main_unit`,`ideaccounting_dev`.`mst_item`.`flag_buy` AS `flag_buy`,`ideaccounting_dev`.`mst_item`.`flag_inv` AS `flag_inv`,`ideaccounting_dev`.`mst_item`.`flag_sell` AS `flag_sell` from `ideaccounting_dev`.`mst_item`

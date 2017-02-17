@@ -1,0 +1,15 @@
+TYPE=VIEW
+query=select distinct `b`.`id_supplier` AS `id_supplier`,concat((case when isnull(`b`.`first_name`) then \'\' else `b`.`first_name` end),\' \',(case when isnull(`b`.`last_name`) then \'\' else `b`.`first_name` end)) AS `name`,`b`.`address` AS `address` from `ideaccounting_dev`.`mst_supplier` `b`
+md5=e2f0ffc54ed29688f673b4714bcb7285
+updatable=0
+algorithm=0
+definer_user=root
+definer_host=localhost
+suid=1
+with_check_option=0
+timestamp=2017-02-17 15:31:59
+create-version=1
+source=select distinct `b`.`id_supplier` AS `id_supplier`,concat((case when isnull(`b`.`first_name`) then \'\' else `b`.`first_name` end),\' \',(case when isnull(`b`.`last_name`) then \'\' else `b`.`first_name` end)) AS `name`,`b`.`address` AS `address` from `mst_supplier` `b`
+client_cs_name=utf8
+connection_cl_name=utf8_general_ci
+view_body_utf8=select distinct `b`.`id_supplier` AS `id_supplier`,concat((case when isnull(`b`.`first_name`) then \'\' else `b`.`first_name` end),\' \',(case when isnull(`b`.`last_name`) then \'\' else `b`.`first_name` end)) AS `name`,`b`.`address` AS `address` from `ideaccounting_dev`.`mst_supplier` `b`

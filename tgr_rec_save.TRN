@@ -1,0 +1,2 @@
+TYPE=TRIGGERNAME
+trigger_table=trn_received_order_head
